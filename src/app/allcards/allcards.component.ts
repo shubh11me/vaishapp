@@ -20,5 +20,7 @@ count:number=0;
   countincre(){
     this.count=this.count+1;
   }
-
+  countdecre(){
+    this.count=this.count-1;
+  }
 }
