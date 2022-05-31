@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'vaishapp';
+games=['Cricket','KhoKho','BAdminton','vitudandu'];
+  show:boolean=true;
+disableWrite:boolean=true;
+new_id="msg_id";
+
+  toggle(){
+    // this.show=!this.show;
+    this.new_id="MyIdToggle"
+    this.disableWrite=!this.disableWrite;
+  }
 }

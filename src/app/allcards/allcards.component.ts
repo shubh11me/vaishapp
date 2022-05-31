@@ -12,7 +12,9 @@ export class AllcardsComponent implements OnInit {
     console.log("hello from cards constr");
 
   }
-count:number=0;
+
+  names:any=['shubham','Sayali','Vaishanavi'];
+  count:number=0;
   ngOnInit(): void {
     console.log("hello from cards init");
   }
