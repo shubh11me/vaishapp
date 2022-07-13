@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MyserviceService } from '../myservice.service';
 
 @Component({
   selector: 'app-allcards',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AllcardsComponent implements OnInit {
   name: string = 'Vaishanvi';
   desc: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestiae magnam illum, iure perferendis inventore sequi dolorum debitis sapiente. Consequuntur et earum laboriosam ex quam. Exercitationem quidem culpa provident. Fugit.'
-  constructor() {
+  constructor(private ser:MyserviceService) {
     console.log("hello from cards constr");
 
   }
@@ -18,11 +19,20 @@ export class AllcardsComponent implements OnInit {
   ngOnInit(): void {
     console.log("hello from cards init");
   }
-
+  baher(){
+    localStorage.removeItem('token');
+    this.ser.redirect('/login')
+  }
   countincre(){
     this.count=this.count+1;
   }
   countdecre(){
     this.count=this.count-1;
   }
+  pr(){
+    this.ser.print();
+  }
+
+
+
 }

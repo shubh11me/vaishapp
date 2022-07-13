@@ -1,14 +1,6 @@
-<div class="me" [id]="new_id" *ngIf="show">Hello Guys</div>
- <!-- <app-new></app-new> -->
-<app-allcards></app-allcards> 
-
-<input type="text" placeholder="Write here" [disabled]="disableWrite">
-<button (click)="toggle()">
-    Show/hide
-</button>
-
-<!-- My games are:-
 <ul>
-    <li *ngFor="let g of games">{{g}}</li>
-
-</ul> -->
+<li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/new">New</a></li>
+    <li><a routerLink="/login">Login</a></li>
+</ul>
+<router-outlet></router-outlet>
