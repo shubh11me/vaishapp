@@ -16,12 +16,25 @@ export class AllcardsComponent implements OnInit {
 
   names:any=['shubham','Sayali','Vaishanavi'];
   count:number=0;
+  data:any[]=[];
   ngOnInit(): void {
     console.log("hello from cards init");
+
+    this.ser.getAllData().subscribe(
+
+      (res:any)=>{
+        this.data=res;
+        console.log(res)
+      },
+      (err)=>{
+        console.log(err)
+
+      }
+    )
   }
   baher(){
     localStorage.removeItem('token');
-    this.ser.redirect('/login')
+    this.ser.redirect('/login');
   }
   countincre(){
     this.count=this.count+1;

@@ -1,7 +1,8 @@
-<div class="card" style="width: 18rem;" *ngFor="let n of names">
+<div class="card" style="width: 18rem;" *ngFor="let n of data">
     <div class="card-body">
-        <h5 class="card-title">{{n}}</h5>
-        <p class="card-text">{{desc}}</p>
+        <h5 class="card-title">{{n.name}}</h5>
+        <p class="card-text">{{n.age}}</p>
+        <p class="card-text">{{n.city}}</p>
         <a (click)="pr()" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>
